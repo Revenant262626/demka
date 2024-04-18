@@ -23,10 +23,10 @@ Ospf |router-id 1.1.1.1\2.2.2.2 \3.3.3.3
 
 Ospf6 | router-id 0.0.0.1\0.0.0.2\0.0.0.3
 |------------|------------|
-HQ – | Area 0.0.0.0 range 2001::11:0/126
-HQ – | Area 0.0.0.0 range 2001::2:0/122
-ISP – |area 0.0.0.0 range 2001::11:0/126
-ISP – |area 0.0.0.0 range 2001::1:0/120
-ISP – |area 0.0.0.0 range 2001::10:0/126
-BR – |area 0.0.0.0 range 2001::10:0/126
-BR – |area 0.0.0.0 range 2001::3:0/124
+HQ – | Area 0.0.0.0 range 2001::7:1/126
+HQ – | Area 0.0.0.0 range 2001::1:1/122
+ISP – |area 0.0.0.0 range 2001::3:1/120
+ISP – |area 0.0.0.0 range 2001::7:2/126
+ISP – |area 0.0.0.0 range 2001::7:6/126
+BR – |area 0.0.0.0 range 2001::2:1/124
+BR – |area 0.0.0.0 range 2001::7:5/126
