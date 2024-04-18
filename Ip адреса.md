@@ -13,13 +13,13 @@
 
 Ospf |router-id 1.1.1.1\2.2.2.2 \3.3.3.3
 |------------|------------|
-| HQ – |Network 192.168.11.3/30 area 0  |
-| HQ – |Network 192.168.2.0/26 area 1 |
-| ISP – |network 192.168.11.3/30 area 0 | 
-| ISP – |network 192.168.1.0/24 area 2 |
-| ISP – |network 192.168.10.3/30 area 0 |
-| BR – |network 192.168.10.3/30 area 0 |
-| BR – | network 192.168.3.0/28 area 3 |
+| HQ – |Network 172.16.10.3/24 area 0  |
+| HQ – |Network 10.10.0.2/26 area 1 |
+| ISP – |network 10.10.0.1/30 area 0 | 
+| ISP – |network 172.16.13.1/24 area 3 |
+| ISP – |network 192.168.12.2/30 area 0 |
+| BR – |network 172.16.10.5/30 area 0 |
+| BR – | network 192.168.12.3/28 area 2 |
 
 Ospf6 | router-id 0.0.0.1\0.0.0.2\0.0.0.3
 |------------|------------|
