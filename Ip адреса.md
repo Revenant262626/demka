@@ -10,6 +10,17 @@
 | BR-SRV | 192\.168.12.5/28 — к BR-R  | 2001::2:2/124 — к BR-R |
 | BR-SRV | 192\.168.12.5/28 — к BR-R  | 2001::2:2/124 — к BR-R |
 
+|Router| ospf
+
+|Ospf |router-id 1.1.1.1|2.2.2.2|3.3.3.3|
+|HQ – |Network 192.168.11.3/30 area 0  |
+|HQ – |Network 192.168.2.0/26 area 1 |
+|ISP – |network 192.168.11.3/30 area 0| 
+|ISP – |network 192.168.1.0/24 area 2 |
+|ISP – |network 192.168.10.3/30 area 0 |
+|BR – |network 192.168.10.3/30 area 0|
+|BR –| network 192.168.3.0/28 area 3|
+
 Ospf6 | router-id 0.0.0.1\0.0.0.2\0.0.0.3
 |------------|------------|
 HQ – | Area 0.0.0.0 range 2001::11:0/126
