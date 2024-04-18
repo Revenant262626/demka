@@ -13,9 +13,9 @@ Ospf |router-id 1.1.1.1\2.2.2.2 \3.3.3.3
 |------------|------------|
 | HQ – |Network 172.16.13.3/24 area 0  |
 | HQ – |Network 10.10.0.2/26 area 1 |
-| ISP – |network 10.10.0.1/30 area 0 | 
-| ISP – |network 172.16.13.1/24 area 3 |
-| ISP – |network 192.168.12.2/30 area 0 |
+| ISP – |network 10.10.0.1/30 area 1 | 
+| ISP – |network 172.16.13.1/24 area 0 |
+| ISP – |network 192.168.12.2/30 area 2 |
 | BR – |network 172.16.13.5/30 area 0 |
 | BR – | network 192.168.12.3/28 area 2 |
 
