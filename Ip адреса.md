@@ -43,5 +43,4 @@ ISP – |area 0.0.0.0 range 2001::7:6/126
 BR – |area 0.0.0.0 range 2001::2:1/124
 BR – |area 0.0.0.0 range 2001::7:5/126
 
-![image](https://github.com/Revenant262626/demka/assets/159104311/4944041d-5e09-4317-bf78-1484152a5d44)
 
