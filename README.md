@@ -58,12 +58,21 @@ BR – |area 0.0.0.0 range 2001::7:5/126
 Dhclient -r
 Dhclient -v
 
-<p>МОДУЛЬ 1</p>
+<center><h1>МОДУЛЬ 1</h1></center>
 
 <p>Теперь пока все не испорчено или правильно сделано, скачаем все что нужно для выполнения заданий в дальнейшем:</p>
+
+```
 <p>Apt install frr(для frr, на всех роутерах(HQ, BR, ISP)</p>
+```
+```
 <p>Apt install isc-dhcp-server(для dhcp, только на HQ)</p>
+```
+
+```
 <p>Apt install radvd(настройка маршрутизации)</p>
+```
+
 <p>Apt install iperf3(для измерения пропускной способности на 2х маршрутизаторах HQ и ISP)</p>
 <p>Apt install bind9 dnsutils(пакеты для днс будет стоять на сервере)(не надо)</p>
 <p>apt install iptables-persistent(SRV для ssh)<p>
