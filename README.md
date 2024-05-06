@@ -181,3 +181,18 @@ Dhclient -v
 <p>systemctl start radvd</p>
 <p>systemctl status radvd</p>
 
+3. Пользователи
+
+<p>adduser имя_пользователя(Admin, Branchadmin, Networkadmin)</p>
+<p>Пароль: P@ssw0rd</p>
+<p>(На CLI = admin)</p>
+<p>(На BR-R = branchadmin, networkadmin)</p>
+<p>(На HQ-R = admin, networkadmin)</p>
+<p>(На BR-SRV = branchadmin, networkadmin)</p>
+<p>(Ha HQ-SRV = admin)</p>
+<p>visudo</p>
+<p># User privilege specification</p>
+<p>root ALL=(ALL:ALL) ALL</p>
+<p>admin ALL=(ALL:ALL) ALL</p>
+
+4.
