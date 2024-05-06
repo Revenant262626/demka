@@ -73,9 +73,17 @@ Dhclient -v
 <p>Apt install radvd(настройка маршрутизации)</p>
 ```
 
+```
 <p>Apt install iperf3(для измерения пропускной способности на 2х маршрутизаторах HQ и ISP)</p>
+```
+
+```
 <p>Apt install bind9 dnsutils(пакеты для днс будет стоять на сервере)(не надо)</p>
+```
+
+```
 <p>apt install iptables-persistent(SRV для ssh)<p>
+```
 
 1. FRR
 
