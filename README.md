@@ -63,26 +63,26 @@ Dhclient -v
 <p>Теперь пока все не испорчено или правильно сделано, скачаем все что нужно для выполнения заданий в дальнейшем:</p>
 
 ```
-<p>Apt install frr(для frr, на всех роутерах(HQ, BR, ISP)</p>
+Apt install frr(для frr, на всех роутерах(HQ, BR, ISP)
 ```
 ```
-<p>Apt install isc-dhcp-server(для dhcp, только на HQ)</p>
-```
-
-```
-<p>Apt install radvd(настройка маршрутизации)</p>
+Apt install isc-dhcp-server(для dhcp, только на HQ)
 ```
 
 ```
-<p>Apt install iperf3(для измерения пропускной способности на 2х маршрутизаторах HQ и ISP)</p>
+Apt install radvd(настройка маршрутизации)
 ```
 
 ```
-<p>Apt install bind9 dnsutils(пакеты для днс будет стоять на сервере)(не надо)</p>
+Apt install iperf3(для измерения пропускной способности на 2х маршрутизаторах HQ и ISP)
 ```
 
 ```
-<p>apt install iptables-persistent(SRV для ssh)<p>
+Apt install bind9 dnsutils(пакеты для днс будет стоять на сервере)(не надо)<
+```
+
+```
+apt install iptables-persistent(SRV для ssh)<
 ```
 
 1. FRR
