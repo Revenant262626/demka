@@ -49,15 +49,15 @@ BR – |area 0.0.0.0 range 2001::7:5/126
 Dhclient -r
 Dhclient -v
 
-МОДУЛЬ 1
+<p>МОДУЛЬ 1</p>
 
-Теперь пока все не испорчено или правильно сделано, скачаем все что нужно для выполнения заданий в дальнейшем:
-Apt install frr(для frr, на всех роутерах(HQ, BR, ISP)
-Apt install isc-dhcp-server(для dhcp, только на HQ)
-Apt install radvd(настройка маршрутизации)
-Apt install iperf3(для измерения пропускной способности на 2х маршрутизаторах HQ и ISP)
-Apt install bind9 dnsutils(пакеты для днс будет стоять на сервере)(не надо)
-apt install iptables-persistent(SRV для ssh)
+<p>Теперь пока все не испорчено или правильно сделано, скачаем все что нужно для выполнения заданий в дальнейшем:</p>
+<p>Apt install frr(для frr, на всех роутерах(HQ, BR, ISP)</p>
+<p>Apt install isc-dhcp-server(для dhcp, только на HQ)</p>
+<p>Apt install radvd(настройка маршрутизации)</p>
+<p>Apt install iperf3(для измерения пропускной способности на 2х маршрутизаторах HQ и ISP)</p>
+<p>Apt install bind9 dnsutils(пакеты для днс будет стоять на сервере)(не надо)</p>
+<p>apt install iptables-persistent(SRV для ssh)<p>
 
 1. FRR
 
@@ -72,95 +72,101 @@ apt install iptables-persistent(SRV для ssh)
 <p>ospf router-id 1.1.1.1</p>
 <p>ospf router-id 2.2.2.2</p>
 <p>ospf router-id 3.3.3.3</p>
-(НА HQ-R)
-network 10.10.0.2/30 area 0
-network 172.16.1.1/28 area 1
-exit
-exit
-write
-exit
-nano /etc/sysctl.conf
-раскоменчиваем ![image](https://github.com/Revenant262626/demka/assets/159104311/cf24a689-9430-4799-8caf-f0f1456cd5bf) ![image](https://github.com/Revenant262626/demka/assets/159104311/e6f0a087-c233-4cfb-adf8-bbb3ce46f30d)
-sysctl -p
-vtysh
-conf t
-router ospf6
-ospf6 router-id 0.0.0.0
-ospf6 router-id 0.0.0.1
-ospf6 router-id 0.0.0.2
-ospf6 router-id 0.0.0.3
-area 0.0.0.0 range 2001::7:1/126
-area 0.0.0.0 range 2001::1:1/122
-exit
-interface ens224
-ipv6 ospf6 area 0.0.0.0
-exit
-interface ens256
-ipv6 ospf6 area 0.0.0.0
-exit
-exit
-write
-exit
-(НА BR-R)
-network 10.10.0.4/30 area 0
-network 172.16.2.1 area 2
-exit
-exit
-write
-exit
-nano /etc/sysctl.conf
-раскоменчиваем ![image](https://github.com/Revenant262626/demka/assets/159104311/cf24a689-9430-4799-8caf-f0f1456cd5bf) ![image](https://github.com/Revenant262626/demka/assets/159104311/e6f0a087-c233-4cfb-adf8-bbb3ce46f30d)
-sysctl -p
-vtysh
-conf t
-router ospf6
-ospf6 router-id 0.0.0.0
-ospf6 router-id 0.0.0.1
-ospf6 router-id 0.0.0.2
-ospf6 router-id 0.0.0.3
-area 0.0.0.0 range 2001::7:5/126
-area 0.0.0.0 range 2001::2:1/124
-exit
-interface ens224
-ipv6 ospf6 area 0.0.0.0
-exit
-interface ens256
-ipv6 ospf6 area 0.0.0.0
-exit
-exit
-write
-exit
-(НА ISP)
-network 172.16.3.1/28 area 3
-network 10.10.0.1/30 area 0
-network 10.10.0.3/30 area 0
-exit
-exit
-write
-exit
-nano /etc/sysctl.conf
-раскоменчиваем ![image](https://github.com/Revenant262626/demka/assets/159104311/cf24a689-9430-4799-8caf-f0f1456cd5bf) ![image](https://github.com/Revenant262626/demka/assets/159104311/e6f0a087-c233-4cfb-adf8-bbb3ce46f30d)
-sysctl -p
-vtysh
-conf t
-router ospf6
-ospf6 router-id 0.0.0.0
-ospf6 router-id 0.0.0.1
-ospf6 router-id 0.0.0.2
-ospf6 router-id 0.0.0.3
-area 0.0.0.0 range 2001::3:1/120
-area 0.0.0.0 range 2001::7:2/126
-area 0.0.0.0 range 2001::7:6/126
-exit
-interface ens224
-ipv6 ospf6 area 0.0.0.0
-exit
-interface ens256
-ipv6 ospf6 area 0.0.0.0
-exit
-exit
-write
-exit
+
+<p>(НА HQ-R)</p>
+
+<p>network 10.10.0.2/30 area 0</p>
+<p>network 172.16.1.1/28 area 1</p>
+<p>exit</p>
+<p>exit</p>
+<p>write</p>
+<p>exit</p>
+<p>nano /etc/sysctl.conf</p>
+<p>раскоменчиваем ![image](https://github.com/Revenant262626/demka/assets/159104311/cf24a689-9430-4799-8caf-f0f1456cd5bf) ![image](https://github.com/Revenant262626/demka/assets/159104311/e6f0a087-c233-4cfb-adf8-bbb3ce46f30d)</p>
+<p>sysctl -p</p>
+<p>vtysh</p>
+<p>conf t</p>
+<p>router ospf6</p>
+<p>ospf6 router-id 0.0.0.0</p>
+<p>ospf6 router-id 0.0.0.1</p>
+<p>ospf6 router-id 0.0.0.2</p>
+<p>ospf6 router-id 0.0.0.3</p>
+<p>area 0.0.0.0 range 2001::7:1/126</p>
+<p>area 0.0.0.0 range 2001::1:1/122</p>
+<p>exit</p>
+<p>interface ens224</p>
+<p>ipv6 ospf6 area 0.0.0.0</p>
+<p>exit</p>
+<p>interface ens256</p>
+<p>ipv6 ospf6 area 0.0.0.0</p>
+<p>exit</p>
+<p>exit</p>
+<p>write</p>
+<p>exit</p>
+
+<p>(НА BR-R)</p>
+
+<p>network 10.10.0.4/30 area 0</p>
+<p>network 172.16.2.1 area 2</p>
+<p>exit</p>
+<p>exit</p>
+<p>write</p>
+<p>exit</p>
+<p>nano /etc/sysctl.conf</p>
+<p>раскоменчиваем ![image](https://github.com/Revenant262626/demka/assets/159104311/cf24a689-9430-4799-8caf-f0f1456cd5bf) ![image](https://github.com/Revenant262626/demka/assets/159104311/e6f0a087-c233-4cfb-adf8-bbb3ce46f30d)</p>
+<p>sysctl -p</p>
+<p>vtysh</p>
+<p>conf t</p>
+<p>router ospf6</p>
+<p>ospf6 router-id 0.0.0.0</p>
+<p>ospf6 router-id 0.0.0.1</p>
+<p>ospf6 router-id 0.0.0.2</p>
+<p>ospf6 router-id 0.0.0.3</p>
+<p>area 0.0.0.0 range 2001::7:5/126</p>
+<p>area 0.0.0.0 range 2001::2:1/124</p>
+<p>exit</p>
+<p>interface ens224</p>
+<p>ipv6 ospf6 area 0.0.0.0</p>
+<p>exit</p>
+<p>interface ens256</p>
+<p>ipv6 ospf6 area 0.0.0.0</p>
+<p>exit</p>
+<p>exit</p>
+<p>write</p>
+<p>exit</p>
+
+<p>(НА ISP)</p>
+
+<p>network 172.16.3.1/28 area 3</p>
+<p>network 10.10.0.1/30 area 0</p>
+<p>network 10.10.0.3/30 area 0</p>
+<p>exit</p>
+<p>exit</p>
+<p>write</p>
+<p>exit</p>
+<p>nano /etc/sysctl.conf</p>
+<p>раскоменчиваем ![image](https://github.com/Revenant262626/demka/assets/159104311/cf24a689-9430-4799-8caf-f0f1456cd5bf) ![image](https://github.com/Revenant262626/demka/assets/159104311/e6f0a087-c233-4cfb-adf8-bbb3ce46f30d)</p>
+<p>sysctl -p</p>
+<p>vtysh</p>
+<p>conf t</p>
+<p>router ospf6</p>
+<p>ospf6 router-id 0.0.0.0</p>
+<p>ospf6 router-id 0.0.0.1</p>
+<p>ospf6 router-id 0.0.0.2</p>
+<p>ospf6 router-id 0.0.0.3</p>
+<p>area 0.0.0.0 range 2001::3:1/120</p>
+<p>area 0.0.0.0 range 2001::7:2/126</p>
+<p>area 0.0.0.0 range 2001::7:6/126</p>
+<p>exit</p>
+<p>interface ens224</p>
+<p>ipv6 ospf6 area 0.0.0.0</p>
+<p>exit</p>
+<p>interface ens256</p>
+<p>ipv6 ospf6 area 0.0.0.0</p>
+<p>exit</p>
+<p>exit</p>
+<p>write</p>
+<p>exit</p>
 
 
 
