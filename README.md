@@ -168,5 +168,16 @@ Dhclient -v
 <p>write</p>
 <p>exit</p>
 
+2. RADVD
 
+<p>/etc/radvd.conf</p> 
+<p>interface ens224 {</p>
+<p>MinRtvAdvInterval 3; (надо смотреть по заданию)</p>
+<p>MaxRtvAdvInterval 60; (надо смотреть по заданию)</p>
+<p>AdvSendAdvert on;</p>
+<p>};</p>
+<p>выходим</p>
+<p>systemctl stop radvd</p>
+<p>systemctl start radvd</p>
+<p>systemctl status radvd</p>
 
