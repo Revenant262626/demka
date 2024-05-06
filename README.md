@@ -82,7 +82,7 @@ Dhclient -v
 <p>write</p>
 <p>exit</p>
 <p>nano /etc/sysctl.conf</p>
-<p>раскоменчиваем ![image](https://github.com/Revenant262626/demka/assets/159104311/cf24a689-9430-4799-8caf-f0f1456cd5bf) ![image](https://github.com/Revenant262626/demka/assets/159104311/e6f0a087-c233-4cfb-adf8-bbb3ce46f30d)</p>
+<p>раскоменчиваем там две команды</p>
 <p>sysctl -p</p>
 <p>vtysh</p>
 <p>conf t</p>
@@ -113,7 +113,7 @@ Dhclient -v
 <p>write</p>
 <p>exit</p>
 <p>nano /etc/sysctl.conf</p>
-<p>раскоменчиваем ![image](https://github.com/Revenant262626/demka/assets/159104311/cf24a689-9430-4799-8caf-f0f1456cd5bf) ![image](https://github.com/Revenant262626/demka/assets/159104311/e6f0a087-c233-4cfb-adf8-bbb3ce46f30d)</p>
+<p>раскоменчиваем там две команды</p>
 <p>sysctl -p</p>
 <p>vtysh</p>
 <p>conf t</p>
@@ -145,7 +145,7 @@ Dhclient -v
 <p>write</p>
 <p>exit</p>
 <p>nano /etc/sysctl.conf</p>
-<p>раскоменчиваем ![image](https://github.com/Revenant262626/demka/assets/159104311/cf24a689-9430-4799-8caf-f0f1456cd5bf) ![image](https://github.com/Revenant262626/demka/assets/159104311/e6f0a087-c233-4cfb-adf8-bbb3ce46f30d)</p>
+<p>раскоменчиваем там две команды</p>
 <p>sysctl -p</p>
 <p>vtysh</p>
 <p>conf t</p>
