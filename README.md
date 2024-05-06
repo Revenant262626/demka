@@ -61,17 +61,17 @@ apt install iptables-persistent(SRV для ssh)
 
 1. FRR
 
-|apt install frr|
-|nano /etc/frr/daemons|
-|меняем ipv4 и ipv6 на да|
-|systemctl restart frr (ОБЯЗАТЕЛЬНО РЕСТАРТНИ СУК)|
-|vtysh |
-|Conf t|
-|router ospf|
-|ospf router-id 0.0.0.0|
-|ospf router-id 1.1.1.1|
-|ospf router-id 2.2.2.2|
-|ospf router-id 3.3.3.3|
+[apt install frr]
+[nano /etc/frr/daemons]
+[меняем ipv4 и ipv6 на да]
+[systemctl restart frr (ОБЯЗАТЕЛЬНО РЕСТАРТНИ СУК)]
+[vtysh]
+[Conf t]
+[router ospf]
+[ospf router-id 0.0.0.0]
+[ospf router-id 1.1.1.1]
+[ospf router-id 2.2.2.2]
+[ospf router-id 3.3.3.3]
 (НА HQ-R)
 network 10.10.0.2/30 area 0
 network 172.16.1.1/28 area 1
