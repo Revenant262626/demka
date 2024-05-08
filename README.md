@@ -53,8 +53,6 @@ ISP – |area 0.0.0.0 range 2001::7:6/126
 BR – |area 0.0.0.0 range 2001::2:1/124
 BR – |area 0.0.0.0 range 2001::7:5/126
 
-![image](https://github.com/Revenant262626/demka/assets/159104311/85b5a694-4dcd-42aa-ba70-1a0a01c623c7)
-
 Если закачка не идет то нужно вводить эти команды пока не заработает:
 Dhclient -r
 Dhclient -v
