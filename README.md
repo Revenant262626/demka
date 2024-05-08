@@ -1,3 +1,4 @@
+![image](https://github.com/Revenant262626/demka/assets/159104311/a60cbce1-0f47-47af-a7dd-8d11d381a6c0)
 
 
 |Имя устройства | IPv4 | IPv6 |
